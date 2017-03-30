@@ -18,10 +18,11 @@ def get_counts(log_file):
     fix_and_bugs_count = count_fix_and_bugs(gitlog_text)
     lines_count = count_lines(gitlog_text)
     
+    print("Defects every 1000 Lines of code:" + '{0:.1f}'.format(fix_and_bugs_count / lines_count * 1000))
     print("Total commits:" + str(commit_count))
     print("Total project lines:" + str(lines_count))
     print("Bugs / Code Lines ratio:" + '{0:.2f}'.format(fix_and_bugs_count / lines_count * 100) + "%")
-
+    
     print("Number of commits by developer:")
     for author in authors:
         print(author + ":" + str(authors_commits[author]))
