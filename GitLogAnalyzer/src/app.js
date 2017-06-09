@@ -41,6 +41,10 @@ app.get('/index', (req, res) => {
   res.render('index.html');
 });
 
+// curl -i https://api.github.com/repos/USERGIT/REPOSITORY/commits -u USERGIT:PASSWORD
+// curl -i https://api.github.com/repos/USERGIT/REPOSITORY/commits/SHA -u USERGIT:PASSWORD
+// SHA es el ID que trae el primer curl
+//FUNCTIONALIDAD PARA TRAER LOS DATOS NECESARIOS
 app.post('/commits', (req, res) => {
   let repo = req.body.repo;
   let user = req.body.usr;
@@ -105,6 +109,8 @@ app.post('/commits', (req, res) => {
     );
   });
 });
+//FIN DE LA FUNCIONALIDAD
+
 
 app.post('/getByIdCommits', (req, res) => {
   let repo = req.body.repo;
