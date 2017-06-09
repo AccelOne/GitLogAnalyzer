@@ -1,0 +1,30 @@
+{
+    "app": {
+        "domain" : "0.0.0.0",
+        "port": 5000,
+        "logs": {
+            "enabled": false,
+            "file": "access.log",
+            "format": "dev"
+         }
+    },
+    "db": {
+        "domain" : "localhost",
+        "name" : "wpc",
+        "user" : "",
+        "pass" : ""
+    },
+    "security": {
+        "enabled" : true
+    },
+    "analytics": {
+        "enabled" : true,
+        "tracking": "UA-XXXXX-X"
+    },
+    "csrf": "disabled",
+    "cors": "enabled",
+    "fixtures": "disabled",
+    "session" : {
+        "secret" : "incorrect"
+    }
+}

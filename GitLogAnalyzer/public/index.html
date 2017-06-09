@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<link href="/components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+		<script src='/components/jquery/dist/jquery.js'> </script>
+		<script src='/components/jquery-ui/ui/minified/jquery-ui.min.js'></script>
+		<script src='/components/bootstrap/dist/js/bootstrap.js'> </script>
+		<script src='/js/app.js'> </script>
+	</head>
+	<body>
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-4">
+				<h3>Get All Commits</h3>
+				<div class="row form-group">
+				  <label class="col-sm-4" for="usr">Name:</label>
+				  <input class="col-sm-6" type="text" class="form-control" id="usr">
+				</div>
+				<div class="row form-group">
+				  <label class="col-sm-4" for="pwd">Password:</label>
+				  <input class="col-sm-6" type="password" class="form-control" id="pwd">
+				</div>
+				<div class="row form-group">
+				  <label class="col-sm-4" for="pwd">Repo:</label>
+				  <input class="col-sm-6" type="text" class="form-control" id="repo">
+				</div>
+				<button type="button" onclick="App.getAllCommits();" class="btn btn-primary">Submit</button>
+			</div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-4">
+				<h3>Get Commit</h3>
+				<div class="row form-group">
+				  <label class="col-sm-4" for="usr">Name:</label>
+				  <input class="col-sm-6" type="text" class="form-control" id="usr_c">
+				</div>
+				<div class="row form-group">
+				  <label class="col-sm-4" for="pwd">Password:</label>
+				  <input class="col-sm-6" type="password" class="form-control" id="pwd_c">
+				</div>
+				<div class="row form-group">
+				  <label class="col-sm-4" for="pwd">Repo:</label>
+				  <input class="col-sm-6" type="text" class="form-control" id="repo_c">
+				</div>
+				<div class="row form-group">
+				  <label class="col-sm-4" for="pwd">ID Sha:</label>
+				  <input class="col-sm-6" type="text" class="form-control" id="sha">
+				</div>
+				<button type="button" onclick="App.getCommitById();" class="btn btn-primary">Submit</button>
+			</div>
+			<div class="col-sm-1"></div>
+		<div>
+		<div id="htmlResult" class="col-sm-10" style="text-align: center;">
+
+		</div>
+	</body>
+</html>
